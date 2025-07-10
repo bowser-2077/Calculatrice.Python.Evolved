@@ -4,4 +4,4 @@
 ---
 
 # En
-###  #This Project is in french , it is a simple python calculator with mental calcul
+### This Project is in french , it is a simple python calculator with mental calcul
