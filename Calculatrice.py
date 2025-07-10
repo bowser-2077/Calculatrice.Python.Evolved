@@ -3,49 +3,49 @@ def menu_math():
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 #Liste Des Operateur Possible
-    print("Calculatrice🧮")
-    operation = input("Entré Une Operation(+ - x / **):") #Ne Pas Espacez sinon il yaura une erreur
-    num1 = float(input("Entrer Un Nombre: "))
-    num2 = float(input("Entrer Un Autre Nombre: "))
+    print("Calculatrice Python")
+    operation = input("Entrez Une Operation(+, -, x, /, *):") #Ne Pas Espacez sinon il yaura une erreur
+    num1 = float(input("Entrez Un Nombre: "))
+    num2 = float(input("Entrez Un Autre Nombre: "))
 
 #Addition
     if operation == "+":
         resultat = num1 + num2
-        print("🟰")
+        print("=")
         print(round(resultat, 3)) #Arrondir le Resultat a 3 si c'est en virgule (Vous Pouvez Le Modifiez )
 #Soustraction
     elif operation == '-':
         resultat = num1 - num2
-        print("🟰")
+        print("=")
         print(round(resultat, 3))    #Arrondir le Resultat a 3 si c'est en virgule (Vous Pouvez Le Modifiez )
 #Multiplication
     elif operation == 'x':
         resultat = num1 * num2
-        print("🟰")
+        print("=")
         print(round(resultat, 3)) #Arrondir le Resultat a 3 si c'est en virgule (Vous Pouvez Le Modifiez )
 #Division
     elif operation == '/':
         resultat = num1 / num2
-        print("🟰")
+        print("=")
         print(round(resultat, 3))     #Arrondir le Resultat a 3 si c'est en virgule (Vous Pouvez Le Modifiez )
 #Puissance
     elif operation == '**':
         resultat = num1 ** num2
-        print("🟰")
+        print("=")
         print(round(resultat, 3)) #Arrondir le Resultat a 3 si c'est en virgule (Vous Pouvez Le Modifiez )
     else:
-        print(f"Erreur 404 {operation} est Invalide Veuillez Ressayer")
+        print(f"Erreur 404 {operation} est Invalide Veuillez Ressayez")
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 def CalculMentale():
-    print("🧠🔢Calcul Mentale🧠🔢")
+    print("Calcul Mentale (BigBrain Moment)")
     while True:
-        print("1.Facile🟩")
-        print("2.Intermediaire🟨")
-        print("3.Difficile🟧")
-        print("4.Génie🟥")
-        print("5.Retour↪️")
-        choix = input("🌀Choississez La Difficulté : ")
+        print("1.Facile")
+        print("2.Intermediaire")
+        print("3.Difficile")
+        print("4.Génie")
+        print("5.Retour↪")
+        choix = input("Choississez La Difficulté : ")
 
         if choix == "1":
             Facile()
@@ -58,10 +58,10 @@ def CalculMentale():
         elif choix == "5":
             Retour()
         else:
-            print("❌ Option invalide, Ressayez encore.")
+            print("Option invalide, Ressayez encore.")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 def Facile():
-    print(f"Difficulté 🟩Facile🟩 Est Choisi")
+    print(f"Difficulté Facile Est Choisi")
 
 
     def generer_exercice():
@@ -83,13 +83,13 @@ def Facile():
     # Demander combien d'exercices l'utilisateur veut (max 100)
     while True:
         try:
-            nb_exercices = int(input("💠Combien d'exercices voulez-vous ? (max 100) : "))
+            nb_exercices = int(input("Combien d'exercices voulez-vous ? (max 100) : "))
             if 1 <= nb_exercices <= 100:  # Configurable au dela de 100 si vous le souhaitez
                 break
             else:
-                print("❌ Veuillez entrer un nombre minimum 1 ")
+                print("Veuillez entrer un nombre minimum 1 ")
         except ValueError:
-            print("❌ Entrée invalide, veuillez entrer un nombre entier.")
+            print("Entrée invalide, veuillez entrer un nombre entier.")
 
     score = 0  # Score de l'utilisateur
 
@@ -100,19 +100,19 @@ def Facile():
             try:
                 reponse_utilisateur = float(input(f"Exercice {i + 1}: {question} = "))
                 if reponse_utilisateur == reponse_correcte:
-                    print("✅ Correct !")
+                    print("Correct !")
                     score += 1
                 else:
-                    print(f"❌ Faux ! La bonne réponse était {reponse_correcte}.")
+                    print(f"Faux ! La bonne réponse était {reponse_correcte}.")
                 break
             except ValueError:
-                print("❌ Veuillez entrer un nombre valide.")
+                print("Veuillez entrer un nombre valide.")
 
     # Afficher le score final
     print(f"\n🎯 Vous avez obtenu {score}/{nb_exercices} bonnes réponses !")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 def Intermediaire():
-        print(f"Difficulté 🟨Intermediaire🟨 Est Choisi")
+        print(f"Difficulté Intermediaire Est Choisi")
 
         def generer_exercice():
             """Génère un exercice de mathématique aléatoire"""
@@ -137,9 +137,9 @@ def Intermediaire():
                 if 1 <= nb_exercices <= 100:  # Configurable au dela de 100 si vous le souhaitez
                     break
                 else:
-                    print("❌ Veuillez entrer un nombre minimum 1 ")
+                    print("Veuillez entrer un nombre minimum 1 ")
             except ValueError:
-                print("❌ Entrée invalide, veuillez entrer un nombre entier.")
+                print("Entrée invalide, veuillez entrer un nombre entier.")
 
         score = 0  # Score de l'utilisateur
 
@@ -150,19 +150,19 @@ def Intermediaire():
                 try:
                     reponse_utilisateur = float(input(f"Exercice {i + 1}: {question} = "))
                     if reponse_utilisateur == reponse_correcte:
-                        print("✅ Correct !")
+                        print("Correct !")
                         score += 1
                     else:
-                        print(f"❌ Faux ! La bonne réponse était {reponse_correcte}.")
+                        print(f"Faux ! La bonne réponse était {reponse_correcte}.")
                     break
                 except ValueError:
-                    print("❌ Veuillez entrer un nombre valide.")
+                    print("Veuillez entrer un nombre valide.")
 
         # Afficher le score final
-        print(f"\n🎯 Vous avez obtenu {score}/{nb_exercices} bonnes réponses !")
+        print(f"\nVous avez obtenu {score}/{nb_exercices} bonnes réponses !")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 def Difficile():
-        print(f"Difficulté 🟧Difficile🟧 Est Choisi")
+        print(f"Difficulté Difficile Est Choisi")
 
         def generer_exercice():
             """Génère un exercice de mathématique aléatoire"""
@@ -187,9 +187,9 @@ def Difficile():
                 if 1 <= nb_exercices <= 100:  # Configurable au dela de 100 si vous le souhaitez
                     break
                 else:
-                    print("❌ Veuillez entrer un nombre minimum 1 ")
+                    print("Veuillez entrer un nombre minimum 1 ")
             except ValueError:
-                print("❌ Entrée invalide, veuillez entrer un nombre entier.")
+                print("Entrée invalide, veuillez entrer un nombre entier.")
 
         score = 0  # Score de l'utilisateur
 
@@ -200,20 +200,20 @@ def Difficile():
                 try:
                     reponse_utilisateur = float(input(f"Exercice {i + 1}: {question} = "))
                     if reponse_utilisateur == reponse_correcte:
-                        print("✅ Correct !")
+                        print("Correct !")
                         score += 1
                     else:
-                        print(f"❌ Faux ! La bonne réponse était {reponse_correcte}.")
+                        print(f"Faux ! La bonne réponse était {reponse_correcte}.")
                     break
                 except ValueError:
-                    print("❌ Veuillez entrer un nombre valide.")
+                    print("Veuillez entrer un nombre valide.")
 
         # Afficher le score final
         print(f"\n🎯 Vous avez obtenu {score}/{nb_exercices} bonnes réponses !")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 def Génie():
-    print(f"Difficulté 🟥Genie🟥 Est Choisi")
+    print(f"Difficulté Genie Est Choisi")
 
     def generer_exercice():
         """Génère un exercice de mathématique aléatoire"""
@@ -241,9 +241,9 @@ def Génie():
             if 1 <= nb_exercices <= 100:  # Configurable au dela de 100 si vous le souhaitez
                 break
             else:
-                print("❌ Veuillez entrer un nombre minimum 1 ")
+                print("Veuillez entrer un nombre minimum 1 ")
         except ValueError:
-            print("❌ Entrée invalide, veuillez entrer un nombre entier.")
+            print("Entrée invalide, veuillez entrer un nombre entier.")
 
     score = 0  # Score de l'utilisateur
 
@@ -254,16 +254,16 @@ def Génie():
             try:
                 reponse_utilisateur = float(input(f"Exercice {i + 1}: {question} = "))
                 if reponse_utilisateur == reponse_correcte:
-                    print("✅ Correct !")
+                    print("Correct !")
                     score += 1
                 else:
-                    print(f"❌ Faux ! La bonne réponse était {reponse_correcte}.")
+                    print(f"Faux ! La bonne réponse était {reponse_correcte}.")
                 break
             except ValueError:
-                print("❌ Veuillez entrer un nombre valide.")
+                print("Veuillez entrer un nombre valide.")
 
     # Afficher le score final
-    print(f"\n🎯 Vous avez obtenu {score}/{nb_exercices} bonnes réponses  !")
+    print(f"\nVous avez obtenu {score}/{nb_exercices} bonnes réponses  !")
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
@@ -305,15 +305,15 @@ A = ["Ne triche pas avec ta calculatrice, elle sait tout... mais pas toi !",
 def Retour():
     print("Vous Avez Choisi 'Retour↪️'")
     while True:
-        print("\n📌 MENU PRINCIPAL")
-        print("▶️Selectionnez Une option: 1 , 2 ou 3")
-        print("1.Calculatrice🧮")
-        print("2.🧠🔢Calcul Mentale🧠🔢")
-        print("3.Quitter❌")
+        print("\n=== MENU PRINCIPAL ===")
+        print("Selectionnez Une option: 1 , 2 ou 3")
+        print("1.Calculatrice")
+        print("2.Calcul Mentale")
+        print("3.Quitter")
         print(random.choice(A))
         print(random.choice(A))
         print("Credit: B.David, 2025 ")
-        choix = input("Choisissez une option ❓ : ")
+        choix = input("Choisissez une option: ")
 
         if choix == "1":
             menu_math()
@@ -322,26 +322,26 @@ def Retour():
         elif choix == "3":
             quit()
         else:
-            print("❌ Option invalide, Ressayez encore.")
+            print("Option invalide, Ressayez encore.")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 while True:
-    print("\n📌 MENU PRINCIPAL")
-    print("▶️Selectionnez Une option: 1 , 2 ou 3")
-    print("1.Calculatrice🧮")
-    print("2.🧠🔢Calcul Mentale🧠🔢")
-    print("3.Quitter❌")
+    print("\n === MENU PRINCIPAL === ")
+    print("Selectionnez Une option: 1 , 2 ou 3")
+    print("1.Calculatrice")
+    print("2.Calcul Mentale")
+    print("3.Quitter")
     print(random.choice(A))
     print(random.choice(A))
     print("Credit: B.David ")
-    choix = input("Choisissez une option ❓ : ")
+    choix = input("Choisissez une option : ")
 
     if choix == "1":
         menu_math()
     elif choix == "2":
         CalculMentale()
     elif choix == "3":
-        print("👋 Au revoir !")
+        print("Au revoir !")
         break
     else:
-        print("❌ Option invalide, Ressayez encore.")
+        print("Option invalide, Ressayez encore.")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
